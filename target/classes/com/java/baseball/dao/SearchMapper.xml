@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    <mapper namespace="com.java.baseball.dao.ISearchRepository">
+    <resultMap id="seaMap" type="com.java.baseball.model.Player">
+		<result property="name" column="name" />
+		<result property="avg" column="avg" />
+		<result property="pa" column="pa" />
+		<result property="ab" column="ab" />
+		<result property="h" column="h" />
+		<result property="b2" column="b2" />
+		<result property="b3" column="b3" />
+		<result property="hr" column="hr" />
+		<result property="bb" column="bb" />
+		<result property="so" column="so" />
+	</resultMap>
+    
+    <select id="getP" parameterType="String" resultType="com.java.baseball.model.Player">
+		SELECT 	*	FROM Player WHERE name = #{name}
+	</select>
+    
+    
+    </mapper>

@@ -12,9 +12,11 @@ public class BaseballMain {
 		BaseballController baseController = (BaseballController) context.getBean("baseController");
 		SearchController seaController=(SearchController)context.getBean("seaController");
 		
+		
+		
 		//baseController.run();
-		seaController.prun();
-		seaController.trun();
+		//seaController.prun();
+		//seaController.trun();
 
 		//어떤 서비스들을 실행시킬지..
 	}

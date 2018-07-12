@@ -3,12 +3,13 @@ package com.java.baseball.model;
 public class Customer {
 	private String Id;
 	private int wallet=0;
-	private String bat_team="";
+	private String bat_team=" ";
 	private int bat_money=0;
 	
-	public Customer(String id) {
-		this.Id=id;
+	public void setId(String id) {
+		Id=id;
 	}
+	
 
 	public void init() {
 		bat_team = "";
@@ -42,6 +43,10 @@ public class Customer {
 	}
 	public int getBmoney() {
 		return bat_money;
+	}
+	public boolean purchase(int money) {
+		wallet+=money;
+		return true;
 	}
 
 }

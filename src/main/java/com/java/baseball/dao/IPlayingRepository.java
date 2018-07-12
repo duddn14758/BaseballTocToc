@@ -1,5 +1,11 @@
 package com.java.baseball.dao;
 
-public interface IPlayingRepository{
+import com.java.baseball.model.*;
 
+public interface IPlayingRepository{
+	Player p=new Player();
+	Customer c=new Customer();
+	
+	Customer getCustinfo(String name);
+	
 }

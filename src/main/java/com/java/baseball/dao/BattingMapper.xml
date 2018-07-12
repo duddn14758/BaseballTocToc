@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    <mapper namespace="com.java.baseball.dao.IPlayingRepository">
+    <resultMap id="batMap" type="com.java.baseball.model.Customer">
+		<result property="id" column="id" />
+		<result property="wallet" column="wallet" />
+		<result property="bat_team" column="bat_team" />
+		<result property="bat_money" column="bat_money" />
+	</resultMap>
+    
+    <select id="getCustInfo" parameterType="String" resultType="com.java.baseball.model.Customer">
+		SELECT 	* FROM Cust WHERE ID = #{id}
+	</select>
+    
+    
+    </mapper>

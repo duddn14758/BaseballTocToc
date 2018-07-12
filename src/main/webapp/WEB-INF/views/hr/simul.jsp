@@ -4,24 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>talktalk site</title>
+<title>Simulation page</title>
 </head>
 <body>
-<h1>예측페이지</h1>
-<h2>${customer.id}님 환영합니다!</h2><br/>
-
-보유금액 : ${customer.wallet}<br/>
-배팅금액 : ${customer.bmoney}
-
-
-
-<br/>
-배팅 팀 : ${customer.bteam}<br/>
-
-
-승률 : <br/>
-<a href="./batting">배팅</a><br>
-<a href="./simul">시뮬레이션</a><br>
-
+시뮬레이션
 </body>
 </html>
