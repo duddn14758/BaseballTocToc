@@ -2,6 +2,7 @@ package com.java.baseball.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -25,14 +26,14 @@ public class SearchController {	//검색 및
 		return "/hr/search";
 	}
 	*/
-	@RequestMapping(value="/hr/search", method=RequestMethod.POST)
+	@RequestMapping(value="/hr/search")
 	public String searchname(Model models) {
-		return "/hr/search";
+		return "hr/search";
 	}
 	
 	@RequestMapping(value="/hr/{playername}")
-	public String getpayerInfo(@PathVariable String name, Model model) {
-		Player p = ISS.p_info(name);
+	public String getplayerInfo(@PathVariable String playername, Model model) {
+		Player p = ISS.p_info(playername);
 		model.addAttribute("player", p);
 		return "hr/view";
 	}

@@ -37,6 +37,9 @@ public class BaseballController {
 	
 	@RequestMapping(value="/hr/toto", method=RequestMethod.GET)
 	public String getsession(Customer cust, Model model) {
+		cust.setId("happy");
+		cust.setBteam("롯데");
+		cust.batting(2000);
 		model.addAttribute("customer", cust);
 		return "hr/toto";
 	}
